@@ -55,4 +55,3 @@ This project is licence under MIT License community standards
 ## Author
 
 - David Munuhe Muchoki
-- Flatiron School
