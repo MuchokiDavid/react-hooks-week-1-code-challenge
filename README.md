@@ -1,34 +1,34 @@
 ## Introduction
 
-For this project, you’ll be building out a React application that displays a list of your recent bank transactions, among other features.
+For this project, I’ll be building out a React application that displays a list of my recent bank transactions, among other features.
 
-The instructions below will walk you through the process of ideation and planning your app: deciding on your user interface, planning how the information will be laid out on the page, etc. You should work through all the planning steps before you start doing any coding.
+The instructions below will walk I through the process of ideation and planning my app: deciding on my user interface, planning how the information will be laid out on the page, etc. I should work through all the planning steps before I start doing any coding.
 
 ## Requirements
 
-For this project, you must:
+For this project, I must:
 
 1. Have a well-written README file.
 2. Fetch data from a local server running JSON DB server.
 
 ## Project Setup & Pre-requisite Data
 
-1. In your project directory, create a db.json file and use this dataLinks to an external site. for your server DB.
+1. In my project directory, create a db.json file and use this dataLinks to an external site. for my server DB.
 2. Run this command to get the backend started: json-server --watch db.json
-3. Test your server by visiting this route in the browser: http://localhost:8001/transactions
+3. Test my server by visiting this route in the browser: http://localhost:8001/transactions
 
 ### Project Setup
 
-Once you have the plan in place for the application you want to build take the following steps:
+Once I have the plan in place for the application I want to build take the following steps:
 
 1. Create a new project folder.
 2. Create a new GitHub repository (NB: ENSURE IT IS PRIVATE).
-3. Add TM as a contributor to the project. (This is only for grading purposes. We promise we won't steal your code)
-4. Please make sure you regularly commit to the repository.
+3. Add TM as a contributor to the project. (This is only for grading purposes. We promise we won't steal my code)
+4. Please make sure I regularly commit to the repository.
 
 ### Project Guidelines
 
-Your project should conform to the following set of guidelines:
+my project should conform to the following set of guidelines:
 
 ### Core Deliverables
 
@@ -40,7 +40,7 @@ As a user, I can:
 
 ## Bonus Deliverables
 
-These bonus deliverables are here for extra challenge and won't affect score. Make sure to commit your work to save your progress before attempting the bonus deliverables!
+These bonus deliverables are here for extra challenge and won't affect score. Make sure to commit my work to save my progress before attempting the bonus deliverables!
 
 As a user, I should be able to:
 
