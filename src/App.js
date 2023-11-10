@@ -6,7 +6,7 @@ import Table from './components/Table';
 
 function App() {
   return (
-    <div className="App container mx-auto">
+    <div className="App container mx-auto bg-gray-100">
       <NavBar/>
       <Search/>
       <Form/>
