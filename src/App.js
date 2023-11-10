@@ -6,7 +6,7 @@ import Table from './components/Table';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container mx-auto">
       <NavBar/>
       <Search/>
       <Form/>

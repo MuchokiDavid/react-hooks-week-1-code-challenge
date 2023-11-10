@@ -11,6 +11,13 @@ For this project, I must:
 1. Have a well-written README file.
 2. Fetch data from a local server running JSON DB server.
 
+## Technologies Used
+- NodeJS
+- React
+- Git
+- Tailwind
+- NPM
+
 ## Project Setup & Pre-requisite Data
 
 1. In my project directory, create a db.json file and use this dataLinks to an external site. for my server DB.
@@ -47,6 +54,7 @@ As a user, I should be able to:
 - Sort transactions alphabetically by category or description.
 
 - Delete a transaction which will remove it from the table
+
 
 ## License
 
