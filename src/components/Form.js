@@ -2,47 +2,10 @@ import React from 'react'
 import {useState} from "react";
 import 'react-datepicker/dist/react-datepicker.css'
 import DatePicker from "react-datepicker";
-import Table from './Table';
 
 function Form() {
   const [date, setDate] = useState(new Date());
-
-  function ExpenseTracker() {
-    // State to manage form data and the database
-    const [formData, setFormData] = useState({
-      date: '',
-      description: '',
-      category: '',
-      amount: '',
-    });
-  
-    const [expenses, setExpenses] = useState([]);
-  
-    // Function to handle form input changes
-    const handleInputChange = (e) => {
-      const { name, value } = e.target;
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
-    };
-  
-    // Function to handle form submission
-    const handleSubmit = (e) => {
-      e.preventDefault();
-  
-      // Save the form data to the database (expenses array)
-      setExpenses([...expenses, formData]);
-  
-      // Clear the form after submission
-      setFormData({
-        date: '',
-        description: '',
-        category: '',
-        amount: '',
-      });
-    };  
-
+    
     return (
     <div>
       <form>
