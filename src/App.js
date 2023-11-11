@@ -2,6 +2,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import Search from './components/Search';
 import Form from './components/Form';
+import TransactionsList from './components/TransactionsList';
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <NavBar/>
       <Search/>
       <Form/>
+      <TransactionsList/>
     </div>
   );
 }
