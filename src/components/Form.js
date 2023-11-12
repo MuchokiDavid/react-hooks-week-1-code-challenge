@@ -1,57 +1,70 @@
 import React from 'react'
 import {useState, useEffect} from "react";
 import 'react-datepicker/dist/react-datepicker.css'
-import DatePicker from "react-datepicker";
+// import DatePicker from "react-datepicker";
 
 function Form() {
   const [date, setDate] = useState(new Date());
+  //form data state
 
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const apiUrl = '/api/db.json';
+  const [formData, setFormData] =useState({
+      date: "",
+      description: "",
+      category: "",
+      amount: 0
+  })
 
-  useEffect(() => {
-    fetch(apiUrl)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        setData(data);
-        setLoading(false);
-        console.log(data)
-      })
-      .catch(error => {
-        setError(error);
-        setLoading(false);
-      });
-  }, []);
+  const handleOnChange = (event)=> {
+    setFormData(
+         {
+             ...formData,
+             [event.target.name]: event.target.value
+         }
+    )
+ }
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
-
+function handleSubmit(e){
+  e.preventDefault()
+  console.log(formData)
+  fetch("http://localhost:3000/transactions",{
+    method: "POST",    
+        headers:{
+            "Content-Type":"application/json"
+            },                    
+          body: JSON.stringify(formData)
+    })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data=> console.log(data))
+}
 
     return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className='grid-rows-2	'>
           <div className='columns-4 mt-5'>
             <div>
-            <DatePicker placeholderText='MM/DD/YYYY' selected={(date)} onChange={(date) => setDate(date)} className='block rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'/>
+            <input 
+                type='date'
+                id='date'
+                name='date'
+                onChange={handleOnChange}
+                className="block rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ml-4"
+            />
             </div>
             <div>
               <input 
                 type='text'
                 id='description'
                 name='description'
+                onChange={handleOnChange}
                 className="mt-4 block rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 placeholder='Description'
               />
@@ -61,6 +74,7 @@ function Form() {
               type='text'
               id='category'
               name='category'
+              onChange={handleOnChange}
               className="mt-4 block rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               placeholder='Category'
             />
@@ -70,6 +84,7 @@ function Form() {
               type='number'
               id='amount'
               name='amount'
+              onChange={handleOnChange}
               className="mt-4 block rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               placeholder='Amount'
             />

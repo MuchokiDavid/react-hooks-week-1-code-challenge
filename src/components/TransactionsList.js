@@ -18,7 +18,7 @@ function TransactionsList() {
         .then(data => {
           setData(data.transactions);
           setLoading(false);
-          console.log(data)
+          // console.log(data)
         })
         .catch(error => {
           setError(error);
@@ -42,10 +42,10 @@ function TransactionsList() {
             <th className="h-14 bg-green-600 border border-slate-600">Amount</th>
         {data.map(data => (
           <tr key={data.id}>
-            <td className="border border-slate-700 ...">{data.date}</td>
-            <td className="border border-slate-700 ...">{data.description}</td>
-            <td className="border border-slate-700 ...">{data.category}</td>
-            <td className="border border-slate-700 ...">{data.amount}</td>
+            <td className="border border-slate-600 ...">{data.date}</td>
+            <td className="border border-slate-600 ...">{data.description}</td>
+            <td className="border border-slate-600 ...">{data.category}</td>
+            <td className="border border-slate-600 ...">{data.amount}</td>
           </tr>
         ))}
       </table>
