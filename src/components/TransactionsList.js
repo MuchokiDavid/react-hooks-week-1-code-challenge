@@ -18,7 +18,7 @@ function TransactionsList() {
         .then(data => {
           setData(data.transactions);
           setLoading(false);
-          // console.log(data)
+          console.log(data)
         })
         .catch(error => {
           setError(error);

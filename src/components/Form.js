@@ -8,7 +8,7 @@ function Form() {
   //form data state
 
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [formData, setFormData] =useState({
       date: "",
@@ -42,7 +42,14 @@ function handleSubmit(e){
           }
           return response.json();
         })
-        .then(data=> console.log(data))
+        .then(data=> {
+          console.log(data)
+          setLoading(false);
+        })
+        .catch(error => {
+          setError(error);
+          setLoading(false);
+        });
 }
 
     return (
