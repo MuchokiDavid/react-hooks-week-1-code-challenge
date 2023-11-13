@@ -26,10 +26,10 @@ function Form() {
     )
  }
 
-function handleSubmit(e){
+async function handleSubmit(e){
   e.preventDefault()
   console.log(formData)
-  fetch("https://react-hooks-code-challenge-server.onrender.com/transactions",{
+  await fetch("https://react-hooks-code-challenge-server.onrender.com/transactions",{
     method: "POST",    
         headers:{
             "Content-Type":"application/json"
