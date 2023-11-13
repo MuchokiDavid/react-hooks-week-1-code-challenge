@@ -5,7 +5,7 @@ function TransactionsList() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const apiUrl = '/api/db.json';
+    const apiUrl = 'https://react-hooks-code-challenge-server.onrender.com/transactions';
   
     useEffect(() => {
       fetch(apiUrl)

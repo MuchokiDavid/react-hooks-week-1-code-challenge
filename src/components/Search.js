@@ -8,7 +8,7 @@ function Search() {
 
     useEffect(() => {
       // Fetch data from the JSON server API
-      fetch('http://localhost:3000/transactions')
+      fetch('https://react-hooks-code-challenge-server.onrender.com/transactions')
         .then(response => response.json())
         .then(data => setTransactions(data))
         .catch(error => console.error('Error fetching data:', error));
@@ -31,7 +31,7 @@ function Search() {
         <table className="mt-8 table-auto border-collapse border border-slate-500 ... w-full">
         <thead>
           <tr>
-            <th className="h-14 bg-green-600 border border-slate-600 ">Date</th>
+            <th className="h-14 bg-green3-600 border border-slate-600 ">Date</th>
             <th className="h-14 bg-green-600 border border-slate-600 ">Description</th>
             <th className="h-14 bg-green-600 border border-slate-600 ">Category</th>
             <th className="h-14 bg-green-600 border border-slate-600 ">Amount</th>
