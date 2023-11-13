@@ -31,7 +31,7 @@ function Search() {
         <table className="mt-8 table-auto border-collapse border border-slate-500 ... w-full">
         <thead>
           <tr>
-            <th className="h-14 bg-green3-600 border border-slate-600 ">Date</th>
+            <th className="h-14 bg-green-600 border border-slate-600 ">Date</th>
             <th className="h-14 bg-green-600 border border-slate-600 ">Description</th>
             <th className="h-14 bg-green-600 border border-slate-600 ">Category</th>
             <th className="h-14 bg-green-600 border border-slate-600 ">Amount</th>
