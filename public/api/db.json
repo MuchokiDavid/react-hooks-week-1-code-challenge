@@ -146,6 +146,27 @@
       "category": "Movie",
       "amount": "10000",
       "id": 21
+    },
+    {
+      "date": "2023-11-30",
+      "description": "asdfghjkl;'",
+      "category": ".,mnbvcx",
+      "amount": "1000",
+      "id": 22
+    },
+    {
+      "date": "",
+      "description": "",
+      "category": "",
+      "amount": 0,
+      "id": 23
+    },
+    {
+      "date": "",
+      "description": "",
+      "category": "",
+      "amount": 0,
+      "id": 24
     }
   ]
 }
