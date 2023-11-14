@@ -26,10 +26,10 @@ function Form() {
     )
  }
 
-async function handleSubmit(e){
+function handleSubmit(e){
   e.preventDefault()
-  console.log(formData)
-  await fetch("https://react-hooks-code-challenge-server.onrender.com/transactions",{
+  // console.log(formData)
+  fetch("http://localhost:3000/transactions",{
     method: "POST",    
         headers:{
             "Content-Type":"application/json"
@@ -50,6 +50,7 @@ async function handleSubmit(e){
           setError(error);
           setLoading(false);
         });
+        window.location.reload();
 }
 
     return (
