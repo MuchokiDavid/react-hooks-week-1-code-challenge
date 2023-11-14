@@ -50,7 +50,6 @@ function handleSubmit(e){
           setError(error);
           setLoading(false);
         });
-        window.location.reload();
 }
 
     return (
