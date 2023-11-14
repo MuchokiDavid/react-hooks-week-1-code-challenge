@@ -29,7 +29,7 @@ function Form() {
 function handleSubmit(e){
   e.preventDefault()
   // console.log(formData)
-  fetch("http://localhost:3000/transactions",{
+  fetch("https://react-hooks-code-challenge-server.onrender.com/transactions",{
     method: "POST",    
         headers:{
             "Content-Type":"application/json"
